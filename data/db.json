@@ -1,0 +1,26 @@
+{
+  "links": [
+    {
+      "text": "link one",
+      "url": "#"
+    },
+    {
+      "text": "link two",
+      "url": "#"
+    },
+    {
+      "text": "link three",
+      "url": "#"
+    }
+  ],
+  "themes": [
+    {
+      "background_color": "beige",
+      "text_color": "black",
+      "link": {
+        "color": "blue",
+        "hover": "yellow"
+      }
+    }
+  ]
+}
