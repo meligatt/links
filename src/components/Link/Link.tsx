@@ -14,7 +14,7 @@ type LinkProps = {
   href: string;
   text: string;
 };
-
+// TODO: add different type of links(classic, show, music )
 export const Link: React.FunctionComponent<LinkProps> = ({
   href,
   text,

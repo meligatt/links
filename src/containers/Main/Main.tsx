@@ -8,13 +8,14 @@ import styled from "styled-components";
 export const MainStyled = styled.main`
   padding: 1rem;
 `;
-
+// TODO: wrap this component with stylecomponent <Theme> to pass the values from request
 export const Main: React.FunctionComponent = (): JSX.Element => (
   <>
     <PageHeader userName="@ImNoJedi">
       <Avatar src="https://lumiere-a.akamaihd.net/v1/images/5cb3c849d5de240001a05880-image_c6729179.jpeg" />
     </PageHeader>
     <MainStyled>
+      {/* TODO: map the link items */}
       <Link
         href="https://www.starwars.com/databank/ahsoka-tano"
         text="My Bio"
