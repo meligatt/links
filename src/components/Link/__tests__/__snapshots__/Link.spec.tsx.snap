@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Link renders image with default props 1`] = `
+<a
+  class="sc-AxjAm loAriE"
+  href="https://meligatt.github.io/melissa-gattoni-frontend-dev.jpeg"
+  target="_blank"
+>
+  mocked text
+</a>
+`;
