@@ -2,18 +2,27 @@ import * as React from "react";
 import styled from "styled-components";
 
 const HeaderStyled = styled.header`
-  border: 1px solid orange;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 `;
 
-interface MyProps {
-  children?: React.ReactNode;
-}
+const UserNameStyled = styled.h1`
+  color: black;
+`;
 
-export const PageHeader: React.FunctionComponent = (
-  props: React.PropsWithChildren<MyProps>
-): JSX.Element => (
+type PageHeaderProps = {
+  userName?: string;
+  children?: React.ReactNode;
+};
+
+export const PageHeader: React.FunctionComponent<PageHeaderProps> = ({
+  userName,
+  children,
+}): JSX.Element => (
   <HeaderStyled>
-    <div>header goes here...</div>
-    {props.children}
+    {children && children}
+    {userName && <UserNameStyled>{userName}</UserNameStyled>}
   </HeaderStyled>
 );

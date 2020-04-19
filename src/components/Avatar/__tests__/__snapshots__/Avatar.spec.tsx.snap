@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Avatar renders image with default props 1`] = `
+<img
+  alt="user name"
+  class="sc-AxjAm eBnlIx"
+  height="64"
+  src="https://meligatt.github.io/melissa-gattoni-frontend-dev.jpeg"
+  width="64"
+/>
+`;
+
+exports[`Avatar renders image with passed props 1`] = `
+<img
+  alt="mocked name"
+  class="sc-AxjAm eBnlIx"
+  height="120"
+  src="https://meligatt.github.io/melissa-gattoni-frontend-dev.jpeg"
+  width="120"
+/>
+`;
