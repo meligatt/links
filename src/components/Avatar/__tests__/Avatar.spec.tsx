@@ -12,7 +12,7 @@ describe("Avatar", () => {
   });
 
   test("renders image with passed props", () => {
-    const { container } = render(
+    const { getByAltText } = render(
       <Avatar
         src="https://meligatt.github.io/melissa-gattoni-frontend-dev.jpeg"
         alt="mocked name"
@@ -20,6 +20,6 @@ describe("Avatar", () => {
         height={120}
       />
     );
-    expect(container.firstChild).toMatchSnapshot();
+    expect(getByAltText("mocked name")).toBeInTheDocument();
   });
 });

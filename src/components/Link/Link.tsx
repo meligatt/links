@@ -1,27 +1,44 @@
 import * as React from "react";
 import styled from "styled-components";
 
-const LinkStyled = styled.a`
-  border-width: 2px;
-  border-style: solid;
-  border-color: pink;
-  background-color: beige;
-  color: #000000;
-  border-radius: 8px;
+const ClassicLinkStyled = styled.a`
+  background-color: #39e09b;
+  color: black;
+  padding: 0.2rem;
+  border-radius: 4px;
+  font-size: 14px;
+  cursor: pointer;
 `;
+
+const ShowsLinkStyled = styled.a`
+  border-bottom: 1px solid #dadee0;
+  background-color: #f5f7f8;
+  color: #000000;
+`;
+
+type LinkVariants = "shows" | "classic";
 
 type LinkProps = {
   href: string;
-  text: string;
+  children: React.ReactNode;
+  type?: LinkVariants;
 };
-// TODO: add different type of links(classic, show, music )
+
 export const Link: React.FunctionComponent<LinkProps> = ({
   href,
-  text,
+  type = "classic",
+  children,
 }): JSX.Element => {
+  if (type === "shows") {
+    return (
+      <ShowsLinkStyled href={href} target="_blank">
+        {children}
+      </ShowsLinkStyled>
+    );
+  }
   return (
-    <LinkStyled href={href} target="_blank">
-      {text}
-    </LinkStyled>
+    <ClassicLinkStyled href={href} target="_blank">
+      {children}
+    </ClassicLinkStyled>
   );
 };
