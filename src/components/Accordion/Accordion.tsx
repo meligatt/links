@@ -10,14 +10,7 @@ const AccordionHeaderStyled = styled.button`
   font-size: 14px;
   cursor: pointer;
 `;
-const NestedAccordionHeaderStyled = styled.button`
-  background-color: #f5f7f8;
-  color: black;
-  padding: 0.2rem;
-  border-radius: 4px;
-  font-size: 14px;
-  cursor: pointer;
-`;
+
 const AccordionPanelStyled = styled.div`
   border-bottom: 1px solid #dadee0;
   background-color: #f5f7f8;
@@ -29,29 +22,36 @@ const AccordionPanelStyled = styled.div`
 
 type AccordionProps = {
   label: string;
-  isNested?: boolean;
   children?: React.ReactNode;
+  customHeader?: ({
+    toggleVisibility,
+    isVisible,
+  }: {
+    toggleVisibility: (isVisible: boolean) => void;
+    isVisible: boolean;
+  }) => JSX.Element;
 };
 
 export const Accordion: React.FunctionComponent<AccordionProps> = ({
   label,
-  isNested = false,
   children,
+  customHeader,
 }): JSX.Element => {
   const [isVisible, setIsVisible] = useState(false);
 
+  const toggleVisibility = (isVisible: boolean): void => {
+    setIsVisible(!isVisible);
+  };
   return (
     <>
-      {isNested ? (
-        <NestedAccordionHeaderStyled
-          onClick={(): void => setIsVisible(!isVisible)}
-        >
-          icon
-          {label}
-          chevron
-        </NestedAccordionHeaderStyled>
+      {typeof customHeader === "function" ? (
+        customHeader({ toggleVisibility, isVisible })
       ) : (
-        <AccordionHeaderStyled onClick={(): void => setIsVisible(!isVisible)}>
+        <AccordionHeaderStyled
+          onClick={(): void => {
+            toggleVisibility(isVisible);
+          }}
+        >
           {label}
         </AccordionHeaderStyled>
       )}

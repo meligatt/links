@@ -8,6 +8,8 @@ const ClassicLinkStyled = styled.a`
   border-radius: 4px;
   font-size: 14px;
   cursor: pointer;
+  text-align: center;
+  text-decoration: none;
 `;
 
 const ShowsLinkStyled = styled.a`

@@ -56,14 +56,29 @@ export const Main: React.FunctionComponent = (): JSX.Element => {
         </Accordion>
 
         <Accordion label="Music">
-          <Accordion label="Spotify" isNested>
-            <div>player goes here</div>
+          <Accordion
+            label="Spotify"
+            customHeader={({ toggleVisibility, isVisible }): JSX.Element => {
+              return (
+                <button onClick={(): void => toggleVisibility(isVisible)}>
+                  icon | Spotify | chevron
+                </button>
+              );
+            }}
+          >
+            <div>Spotify player goes here</div>
           </Accordion>
-          <Accordion label="Apple Music" isNested>
-            <div>player goes here</div>
-          </Accordion>
-          <Accordion label="SoundCloud" isNested>
-            <div>player goes here</div>
+          <Accordion
+            label="Apple"
+            customHeader={({ toggleVisibility, isVisible }): JSX.Element => {
+              return (
+                <button onClick={(): void => toggleVisibility(isVisible)}>
+                  icon | Apple | chevron
+                </button>
+              );
+            }}
+          >
+            <div>Apple player goes here</div>
           </Accordion>
         </Accordion>
       </MainStyled>
