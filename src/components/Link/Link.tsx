@@ -2,8 +2,9 @@ import * as React from "react";
 import styled from "styled-components";
 
 const ClassicLinkStyled = styled.a`
-  background-color: #39e09b;
-  color: black;
+  background-color: ${(props): string =>
+    props.theme.link.default.background_color};
+  color: ${(props): string => props.theme.link.default.color};
   border-radius: 4px;
   font-size: 14px;
   cursor: pointer;
@@ -11,6 +12,16 @@ const ClassicLinkStyled = styled.a`
   text-decoration: none;
   padding: 0.5rem;
   margin-bottom: 1rem;
+  &:hover {
+    background-color: ${(props): string =>
+      props.theme.link.hover.background_color};
+    color: ${(props): string => props.theme.link.hover.color};
+  }
+  &:focus {
+    background-color: ${(props): string =>
+      props.theme.link.focus.background_color};
+    color: ${(props): string => props.theme.link.focus.color};
+  }
 `;
 
 const ShowsLinkStyled = styled.a`

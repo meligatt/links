@@ -6,6 +6,7 @@ const HeaderStyled = styled.header`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-color: ${(props): string => props.theme.background_color};
 `;
 
 const UserNameStyled = styled.h1`

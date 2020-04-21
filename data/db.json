@@ -56,11 +56,21 @@
     },
     "themes": [
       {
-        "background_color": "beige",
+        "background_color": "#f5bffa",
         "text_color": "black",
         "link": {
-          "color": "blue",
-          "hover": "yellow"
+          "default": {
+            "background_color": "#1b5ccc",
+            "color": "#FFFFFF"
+          },
+          "hover": {
+            "background_color": "#FFFFFF",
+            "color": "#1b5ccc"
+          },
+          "focus": {
+            "background_color": "#FFFFFF",
+            "color": "#1b5ccc"
+          }
         }
       }
     ]
