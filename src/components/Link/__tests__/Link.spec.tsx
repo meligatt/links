@@ -4,13 +4,12 @@ import "@testing-library/jest-dom/extend-expect";
 import { Link } from "../Link";
 
 describe("Link", () => {
-  test("renders image with default props", () => {
+  test("renders link with text", () => {
     const { getByText } = render(
-      <Link
-        href="https://meligatt.github.io/melissa-gattoni-frontend-dev.jpeg"
-        text="mocked text"
-      />
+      <Link href="https://meligatt.github.io/melissa-gattoni-frontend-dev.jpeg">
+        mocked link text
+      </Link>
     );
-    expect(getByText("mocked text")).toMatchSnapshot();
+    expect(getByText("mocked link text")).toBeInTheDocument();
   });
 });

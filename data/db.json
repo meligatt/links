@@ -1,26 +1,68 @@
 {
-  "links": [
-    {
-      "text": "link one",
-      "url": "#"
+  "user": {
+    "details": {
+      "username": "iamnojedi",
+      "avatarURL": "https://lumiere-a.akamaihd.net/v1/images/5cb3c849d5de240001a05880-image_c6729179.jpeg"
     },
-    {
-      "text": "link two",
-      "url": "#"
+    "links": {
+      "classic": [
+        {
+          "text": "My Bio here!",
+          "url": "https://www.starwars.com/databank/ahsoka-tano",
+          "type": "classic"
+        },
+        {
+          "text": "My adventure's journal",
+          "url": "https://dgattoni.github.io/articles/index.html",
+          "type": "classic"
+        },
+        {
+          "text": "My frenemy",
+          "url": "https://www.starwars.com/databank/darth-maul",
+          "type": "classic"
+        }
+      ],
+      "shows": [
+        {
+          "text": "The Clone Wars",
+          "url": "https://www.songkick.com/festivals/1528919-star-wars-celebration/id/28447399-star-wars-celebration-2017",
+          "type": "shows",
+          "date": "Thursday 13 April 2017"
+        },
+        {
+          "text": "Lightsaber battle at Mel's Birthday",
+          "url": "https://www.songkick.com/artists/225409-star-wars",
+          "type": "shows",
+          "date": "Friday 17 April 2020"
+        }
+      ],
+      "music": [
+        {
+          "text": "Spotify",
+          "url": "https://open.spotify.com/embed/album/4UhMQEHYPzRi6EIUkh57Q0",
+          "type": "music"
+        },
+        {
+          "text": "Youtube",
+          "url": "https://www.youtube.com/embed/r-KAS4ilG3A",
+          "type": "music"
+        },
+        {
+          "text": "Soundcloud",
+          "url": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/286534483&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true",
+          "type": "music"
+        }
+      ]
     },
-    {
-      "text": "link three",
-      "url": "#"
-    }
-  ],
-  "themes": [
-    {
-      "background_color": "beige",
-      "text_color": "black",
-      "link": {
-        "color": "blue",
-        "hover": "yellow"
+    "themes": [
+      {
+        "background_color": "beige",
+        "text_color": "black",
+        "link": {
+          "color": "blue",
+          "hover": "yellow"
+        }
       }
-    }
-  ]
+    ]
+  }
 }

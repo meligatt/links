@@ -13,7 +13,7 @@ const UserNameStyled = styled.h1`
 `;
 
 type PageHeaderProps = {
-  userName?: string;
+  userName: string;
   children?: React.ReactNode;
 };
 
@@ -23,6 +23,6 @@ export const PageHeader: React.FunctionComponent<PageHeaderProps> = ({
 }): JSX.Element => (
   <HeaderStyled>
     {children && children}
-    {userName && <UserNameStyled>{userName}</UserNameStyled>}
+    {<UserNameStyled>@{userName}</UserNameStyled>}
   </HeaderStyled>
 );
