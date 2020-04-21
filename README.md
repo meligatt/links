@@ -1,13 +1,16 @@
 # Development notes:
+
 ## server:
 - tooling: https://github.com/typicode/json-server
 - to install json-server: yarn global add json-server
 - to start json-server: from root folder: cd data and run json-server db.json
+
 ## client:
-- wip
-- wip
-- wip
-- wip
+- React
+- Typescript
+- Styled Components
+- To start dev server: `yarn dev`
+
 
 <p align="center">
   <img src="https://github.com/blstrco/linktr.ee-backend-assessment/raw/master/Screen%20Shot%202019-07-08%20at%202.09.47%20pm.png">
