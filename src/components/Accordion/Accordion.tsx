@@ -47,7 +47,7 @@ type AccordionProps = {
     isVisible: boolean;
   }) => JSX.Element;
 };
-
+// Todo: add unit test to this component
 export const Accordion: React.FunctionComponent<AccordionProps> = ({
   label,
   children,

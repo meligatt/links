@@ -1,6 +1,6 @@
 import * as React from "react";
 import styled from "styled-components";
-
+// TODO: font-size and family, and spacing should be defined in a global context, not per component.
 const ClassicLinkStyled = styled.a`
   background-color: ${(props): string =>
     props.theme.link.default.background_color};
@@ -23,7 +23,7 @@ const ClassicLinkStyled = styled.a`
     color: ${(props): string => props.theme.link.focus.color};
   }
 `;
-
+// TODO: Make icons SVG, loading from assets.
 const ShowsLinkStyled = styled.a`
   border-bottom: 1px solid #dadee0;
   background-color: #f5f7f8;

@@ -32,6 +32,8 @@ export const Main: React.FunctionComponent = (): JSX.Element => {
   const [theme, setTheme] = useState(defaultTheme);
 
   useEffect(() => {
+    // TODO: another api can be used for fetching data,
+    // maybe axios? but in this case I didn't ant to use another dependency.
     fetch("http://localhost:3000/user")
       .then((response) => response.json())
       .then((response) => {
@@ -95,6 +97,7 @@ export const Main: React.FunctionComponent = (): JSX.Element => {
                   }}
                 >
                   {/* TODO: this can be a component */}
+                  {/* TODO: Find a way of mute the other players when an specific embedded player is On. */}
                   <iframe
                     src={url}
                     width="100%"
