@@ -1,6 +1,8 @@
 import * as React from "react";
 import styled from "styled-components";
 
+// TODO: avatar image can be as a background-image in the styled components,
+// with a background-size: cover to preserve the aspect ratio.
 const AvatarStyled = styled.img`
   border-radius: 50%;
 `;

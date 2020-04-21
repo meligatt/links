@@ -7,13 +7,24 @@ const AccordionStyled = styled.div`
 `;
 
 const AccordionHeaderStyled = styled.button`
-  background-color: #39e09b;
-  color: black;
+  background-color: ${(props): string =>
+    props.theme.link.default.background_color};
+  color: ${(props): string => props.theme.link.default.color};
   padding: 0.5rem;
   border-radius: 4px;
   font-size: 14px;
   cursor: pointer;
   width: 100%;
+  &:hover {
+    background-color: ${(props): string =>
+      props.theme.link.hover.background_color};
+    color: ${(props): string => props.theme.link.hover.color};
+  }
+  &:focus {
+    background-color: ${(props): string =>
+      props.theme.link.focus.background_color};
+    color: ${(props): string => props.theme.link.focus.color};
+  }
 `;
 
 const AccordionPanelStyled = styled.div`
