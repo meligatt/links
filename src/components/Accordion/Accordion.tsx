@@ -2,13 +2,18 @@ import * as React from "react";
 import { useState } from "react";
 import styled from "styled-components";
 
+const AccordionStyled = styled.div`
+  margin-bottom: 1rem;
+`;
+
 const AccordionHeaderStyled = styled.button`
   background-color: #39e09b;
   color: black;
-  padding: 0.2rem;
+  padding: 0.5rem;
   border-radius: 4px;
   font-size: 14px;
   cursor: pointer;
+  width: 100%;
 `;
 
 const AccordionPanelStyled = styled.div`
@@ -43,7 +48,7 @@ export const Accordion: React.FunctionComponent<AccordionProps> = ({
     setIsVisible(!isVisible);
   };
   return (
-    <>
+    <AccordionStyled>
       {typeof customHeader === "function" ? (
         customHeader({ toggleVisibility, isVisible })
       ) : (
@@ -59,6 +64,6 @@ export const Accordion: React.FunctionComponent<AccordionProps> = ({
       <AccordionPanelStyled isVisible={isVisible}>
         {children}
       </AccordionPanelStyled>
-    </>
+    </AccordionStyled>
   );
 };

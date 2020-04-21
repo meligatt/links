@@ -4,18 +4,27 @@ import styled from "styled-components";
 const ClassicLinkStyled = styled.a`
   background-color: #39e09b;
   color: black;
-  padding: 0.2rem;
   border-radius: 4px;
   font-size: 14px;
   cursor: pointer;
   text-align: center;
   text-decoration: none;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
 `;
 
 const ShowsLinkStyled = styled.a`
   border-bottom: 1px solid #dadee0;
   background-color: #f5f7f8;
   color: #000000;
+  padding: 0.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-decoration: none;
+  &:after {
+    content: "˃";
+  }
 `;
 
 type LinkVariants = "shows" | "classic";
